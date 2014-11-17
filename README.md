@@ -1,4 +1,4 @@
-SHA-OFB-CTR
+SHA-CFB-OFB-CTR
 ===========
 
-OFB and CTR mode encryption using SHA hash function
+Encryption in CFB, OFB, and CTR mode using SHA hash function
