@@ -5,6 +5,8 @@ CONFIG -= qt
 CONFIG += c++11
 
 CONFIG += release
+TARGET  = hashcipher
+
 
 # remove possible other optimization flags
 QMAKE_CXXFLAGS_RELEASE -= -O
@@ -24,7 +26,10 @@ SOURCES += main.cpp \
     md5.cpp \
     hashcfb.cpp \
     hashofb.cpp \
-    hashctr.cpp
+    hashctr.cpp \
+    sha2/sha2_c.c \
+    sha2.cpp
+
 
 HEADERS += \
     sha1.h \
@@ -35,5 +40,8 @@ HEADERS += \
     md5.h \
     hashcfb.h \
     hashofb.h \
-    hashctr.h
+    hashctr.h \
+    sha2/sha2_c.h \
+    sha2.h
+
 

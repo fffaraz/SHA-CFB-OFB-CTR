@@ -1,10 +1,12 @@
 #ifndef MD5_H
 #define MD5_H
 
-class md5
+#include "hash.h"
+
+class MD5 : public Hash
 {
 public:
-    md5();
+    MD5();
 };
 
 #endif // MD5_H

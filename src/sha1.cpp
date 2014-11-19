@@ -1,5 +1,5 @@
 #include "sha1.h"
 
-sha1::sha1()
+SHA1::SHA1()
 {
 }
