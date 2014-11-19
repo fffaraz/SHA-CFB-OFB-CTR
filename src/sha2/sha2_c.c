@@ -31,13 +31,13 @@
  * SUCH DAMAGE.
  */
 
-#if 0
+#if 1
 #define UNROLL_LOOPS /* Enable loops unrolling */
 #endif
 
 #include <string.h>
 
-#include "sha2.h"
+#include "sha2/sha2_c.h"
 
 #define SHFR(x, n)    (x >> n)
 #define ROTR(x, n)   ((x >> n) | (x << ((sizeof(x) << 3) - n)))

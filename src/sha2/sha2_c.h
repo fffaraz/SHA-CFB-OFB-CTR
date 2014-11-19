@@ -31,8 +31,8 @@
  * SUCH DAMAGE.
  */
 
-#ifndef SHA2_H
-#define SHA2_H
+#ifndef SHA2_C_H
+#define SHA2_C_H
 
 #define SHA224_DIGEST_SIZE ( 224 / 8)
 #define SHA256_DIGEST_SIZE ( 256 / 8)
@@ -104,4 +104,4 @@ void sha512(const unsigned char *message, unsigned int len,
 }
 #endif
 
-#endif /* !SHA2_H */
+#endif /* !SHA2_C_H */
