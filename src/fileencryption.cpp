@@ -1,6 +1,6 @@
 #include "fileencryption.h"
 
-FileEncryption::FileEncryption(uint64_t key)
+FileEncryption::FileEncryption(ui512 key)
 {
 
 }
