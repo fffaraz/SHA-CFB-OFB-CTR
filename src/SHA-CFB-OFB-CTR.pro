@@ -4,24 +4,25 @@
 #
 #-------------------------------------------------
 
-QT       += core
-QT       -= gui
-
-TARGET = SHA-CFB-OFB-CTR
-CONFIG   += console
-CONFIG   -= app_bundle
-
 TEMPLATE = app
+QT     += core
+QT     -= gui
+CONFIG += console
+CONFIG -= app_bundle
+CONFIG += c++11
 
+TARGET  = shacipher
 
 SOURCES += main.cpp \
     shacfb.cpp \
     shaofb.cpp \
     shactr.cpp \
-    shacipher.cpp
+    shacipher.cpp \
+    filecipher.cpp
 
 HEADERS += \
     shacfb.h \
     shaofb.h \
     shactr.h \
-    shacipher.h
+    shacipher.h \
+    filecipher.h

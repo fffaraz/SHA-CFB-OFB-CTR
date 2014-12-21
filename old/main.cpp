@@ -1,19 +1,17 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-#include <QCoreApplication>
-
-#include "filecipher.h"
+#include "tests.h"
+#include "fileencryption.h"
 
 void usage()
 {
-    cout << "Usage: shacipher -e/-d key [input-file] [output-file]" << endl;
+    cout << "Usage: hashcipher -e/-d key [input-file] [output-file]" << endl;
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-    //QCoreApplication a(argc, argv);
+    alltests(); return 0;
 
     if(argc < 3)
     {
@@ -34,14 +32,13 @@ int main(int argc, char *argv[])
     if(argc > 4)
         output = argv[4];
 
-    quint64 key = strtoull(argv[2], nullptr, 16);
-    FileCipher fc(key);
+    ui512 key = strtoull(argv[2], nullptr, 16);
+    FileEncryption fe(key);
 
     if(enc_dec == "-e")
-        return fc.encrypt(input, output);
+        return fe.encrypt(input, output);
     if(enc_dec == "-d")
-        return fc.decrypt(input, output);
+        return fe.decrypt(input, output);
 
     return 0;
-    //return a.exec();
 }

@@ -9,6 +9,7 @@ SHACTR::SHACTR(QByteArray key, QByteArray iv) :
 QByteArray SHACTR::encrypt(QByteArray block)
 {
     QByteArray hashoutput = hash(QByteArray::fromRawData((char *)&counter, sizeof(counter)));
+    counter++;
     return xorba(block, hashoutput);
 }
 
